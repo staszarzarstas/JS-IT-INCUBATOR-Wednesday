@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+
+</head>
+<body>
+<script src="Shalow%20and%20deep%20copy.js">
+
+    let a = {
+        name: "Bob",
+        protocol: "http",
+        maxStudentsCount: 10,
+        isOnline: true,
+        students: ['ivan', 'andrey', "farid"],
+        classroom: {
+            teacher: {
+                name: "wew",
+                age: 18
+            }
+        }
+    }
+
+
+    let b = {...a};
+    {
+        b.students = [...a.students];
+        b.students = ['ivan', 'andrey', "farid", "SSSS"]
+        b.classroom = {...a.classroom};
+        b.classroom.teacher = {...a.classroom.teacher};
+        b.classroom.teacher.name = "dima";
+
+
+    }
+
+    console.log(a, b)
+
+</script>
+
+
+</body>
+</html>
